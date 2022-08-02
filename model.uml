@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>io.budgetapp.budget_application.model</OriginalElement>
+  <nodes>
+    <node x="0.0" y="535.0">io.budgetapp.budget_application.model.Transaction</node>
+    <node x="64.5" y="171.0">io.budgetapp.budget_application.model.Group</node>
+    <node x="50.0" y="0.0">io.budgetapp.budget_application.model.User</node>
+    <node x="21.5" y="320.0">io.budgetapp.budget_application.model.Category</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="io.budgetapp.budget_application.model.Transaction" target="io.budgetapp.budget_application.model.Category" relationship="TO_ONE">
+      <point x="63.25" y="-82.5" />
+      <point x="189.75" y="510.0" />
+      <point x="179.0" y="510.0" />
+      <point x="52.5" y="82.5" />
+    </edge>
+    <edge source="io.budgetapp.budget_application.model.Group" target="io.budgetapp.budget_application.model.User" relationship="DEPENDENCY">
+      <point x="-31.0" y="-49.5" />
+      <point x="95.5" y="146.0" />
+      <point x="88.25" y="146.0" />
+      <point x="-38.25" y="60.5" />
+    </edge>
+    <edge source="io.budgetapp.budget_application.model.Group" target="io.budgetapp.budget_application.model.User" relationship="TO_ONE">
+      <point x="31.0" y="-49.5" />
+      <point x="157.5" y="146.0" />
+      <point x="164.75" y="146.0" />
+      <point x="38.25" y="60.5" />
+    </edge>
+    <edge source="io.budgetapp.budget_application.model.Category" target="io.budgetapp.budget_application.model.Group" relationship="DEPENDENCY">
+      <point x="-52.5" y="-82.5" />
+      <point x="74.0" y="295.0" />
+      <point x="95.5" y="295.0" />
+      <point x="-31.0" y="49.5" />
+    </edge>
+    <edge source="io.budgetapp.budget_application.model.Transaction" target="io.budgetapp.budget_application.model.Category" relationship="DEPENDENCY">
+      <point x="-63.25" y="-82.5" />
+      <point x="63.25" y="510.0" />
+      <point x="74.0" y="510.0" />
+      <point x="-52.5" y="82.5" />
+    </edge>
+    <edge source="io.budgetapp.budget_application.model.Category" target="io.budgetapp.budget_application.model.Group" relationship="TO_ONE">
+      <point x="52.5" y="-82.5" />
+      <point x="179.0" y="295.0" />
+      <point x="157.5" y="295.0" />
+      <point x="31.0" y="49.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8972222222222223" showDependencies="true" x="126.49999999999989" y="350.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
