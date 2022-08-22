@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 public class Category {
+    // TODO : : : > > This is the main budget.
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
