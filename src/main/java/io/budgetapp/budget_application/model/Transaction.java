@@ -18,6 +18,6 @@ public class Transaction {
     private BigDecimal total;
     private String transactType;
     private String note;
-    @ManyToOne
-    private Category category;
+//    @ManyToOne
+//    private Category category;
 }
