@@ -97,6 +97,15 @@ public class CategoryServiceImpl implements CategoryService {
     public Category updateCategory(CategoryRequest categoryRequest, Long id) throws CategoryException {
         Category categoryToUpdate = categoryRepository.findById(id)
                 .orElseThrow(() -> new CategoryException("Can't find a budget with the name"));
+
+        Group group = new Group();
+
+        log.info("Group saved");
+
+        modelMapper.map(categoryRequest.getGroup(), group);
+        Group savedGroup = groupRepository.save(group);
+
+        categoryToUpdate.setGroup(savedGroup);
         modelMapper.map(categoryRequest, categoryToUpdate);
         log.info("Update Successful");
         return categoryRepository.save(categoryToUpdate);

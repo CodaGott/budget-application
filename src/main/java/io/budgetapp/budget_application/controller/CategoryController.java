@@ -33,5 +33,14 @@ public class CategoryController {
         }
     }
 
+    @PutMapping("/update/{id}")
+    public ResponseEntity<?> updateInfo(@RequestBody CategoryRequest categoryRequest, @PathVariable Long id){
+        try {
+            return new ResponseEntity<>(categoryService.updateCategory(categoryRequest, id), HttpStatus.ACCEPTED);
+        }catch (CategoryException e){
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
+        }
+    }
+
 
 }
